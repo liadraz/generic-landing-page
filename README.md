@@ -29,7 +29,7 @@ This project designed to practice and demonstrate fundamental web development sk
 
 ## 🔗 Live Demo
 
-[View Live Demo](#) https://liadraz.github.io/generic-landing-page/
+[View Live Demo](https://liadraz.github.io/generic-landing-page/)
 
 
 **Note**: This is a learning project created for educational purposes as part of The Odin Project curriculum.
