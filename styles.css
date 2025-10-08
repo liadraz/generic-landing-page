@@ -1,7 +1,7 @@
+/* 1. Reset/Base styles */
+
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
 
     min-height: 100vh;
     background-color: rgb(17, 17, 17);
@@ -12,8 +12,6 @@ body {
 
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -23,10 +21,37 @@ a {
     font-weight: 500;
 }
 
-p {
-    margin: 0;
-    padding: 0;
+button {
+    background-color: #3882F6;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
 }
+
+/* 2. Layout components */
+
+header,
+footer {
+    color: white;
+    background-color: #1F2937;
+    text-align: center;
+    padding: 40px 200px;
+}
+
+header {
+    padding: 0 200px;
+    text-align: left;
+}
+
+main {
+    flex: 1;
+    background-color: white;
+}
+
+/* 3. Component styles */
 
 .container {
     flex: 1;
@@ -35,16 +60,6 @@ p {
 
     display: flex;
     flex-direction: column;
-}
-
-header,
-footer {
-    background-color: #1F2937;
-    color: white;
-}
-
-header {
-    padding: 0 200px;
 }
 
 .nav-bar {
@@ -56,7 +71,7 @@ header {
     margin-bottom: 100px;
 }
 
-.hero-logo {
+.nav-logo {
     font-size: 24px;
     color: #F9FAF8;
     font-weight: 900;
@@ -75,26 +90,17 @@ header {
     margin-bottom: 100px;
 }
 
-.hero-left {
+.hero-content {
     padding-right: 50px;
 }
 
-.hero-main-text {
+.hero-title {
     font-size: 48px;
     color: #F9FAF8;
     font-weight: 900;
 }
 
-.white-subtext {
-    font-size: 18px;
-    color: #E5E7EB;
-
-    padding: 6px 0;
-}
-
 .hero-image {
-    text-align: center;
-
     width: 100%;
     max-width: 1100px;
     height: 250px;
@@ -102,26 +108,7 @@ header {
     object-position: center;
 }
 
-button {
-    background-color: #3882F6;
-    color: white;
-    padding: 10px 30px;
-    font-size: 16px;
-    font-weight: 900;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.no-border {
-    border: none;
-}
-
-main {
-    flex: 1 0;
-    background-color: white;
-}
-
-.info-title {
+.section-title {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
@@ -133,9 +120,8 @@ main {
 .cards {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 100px;
-    gap: 20px;
+    gap: 22px;
 
     padding: 0 300px;
 }
@@ -145,12 +131,12 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 22px;
     align-items: center;
 }
 
-.card-img {
-    border-radius: 1px;
+.card-image {
+    border-radius: 8px;
     width: 150px;
     height: 150px;
 }
@@ -162,6 +148,9 @@ main {
 }
 
 .quote {
+    display: flex;
+    flex-direction: column;
+
     background-color: #E5E7EB;
     padding: 100px 300px;
     margin-bottom: 100px;
@@ -172,8 +161,6 @@ main {
     font-size: 36px;
     font-weight: 300;
     font-style: italic;
-
-    text-align: left;
 }
 
 .quote-author {
@@ -182,7 +169,7 @@ main {
     font-weight: 900;
 
     margin-top: 20px;
-    text-align: right;
+    align-self: flex-end;
 }
 
 .signup {
@@ -205,11 +192,29 @@ main {
     max-width: 600px;
 }
 
-.white-border {
+/* 4. Utility classes */
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #E5E7EB;
+    padding: 6px 0;
+}
+
+.signup-subtext {
+    font-size: 18px;
+    color: #E5E7EB;
+    padding: 6px 0;
+}
+
+.btn-primary {
+    border: none;
+}
+
+.btn-secondary {
     border: 2px solid white;
 }
 
-footer {
-    padding: 40px 200px;
-    text-align: center;
+.reset-spacing {
+    margin: 0;
+    padding: 0;
 }
